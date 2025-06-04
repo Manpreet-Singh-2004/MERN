@@ -3,8 +3,10 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 
+// Importing Routes 
 const workoutRoutes = require('./routes/workouts')
 const homeRoutes = require('./routes/home')
+const mainPage = require('./routes/mainsrc')
 
 //  Express app
 const app = express()
@@ -20,6 +22,7 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/workouts', workoutRoutes)
 app.use('/home', homeRoutes)
+app.use('/', mainPage)
 
 
 // Connect to DB
