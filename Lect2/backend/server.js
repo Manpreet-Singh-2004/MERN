@@ -9,6 +9,7 @@ const homeRoutes = require('./routes/home')
 const mainPage = require('./routes/mainsrc')
 
 //  Express app
+//  Middleware
 const app = express()
 
 // Middleware
